@@ -1,3 +1,4 @@
+@extends('layouts.app')
 @section('form')
 <h1>Pizza Builder</h1>
 
