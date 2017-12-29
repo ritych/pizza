@@ -1,8 +1,9 @@
- <!-- resources/views/tasks.blade.php -->
+<!-- resources/views/front.blade.php -->
 @extends('layouts.app')
 
 @section('form')
 <h1>Pizza Builder</h1>
+@include('common.errors')
 <form action="{{ url('submit') }}" method="POST">
 	<h2>1. Pick your pizza size</h2>
 	<div class="radio_size">

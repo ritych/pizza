@@ -1,7 +1,9 @@
 @extends('layouts.app')
 @section('form')
 <h1>Pizza Builder</h1>
-
+	@foreach ($orders as $order) 
+		{{$order->name}}
+	@endforeach
 	<h2>1. Pick your pizza size</h2>
 	<div class="radio_size">
 		

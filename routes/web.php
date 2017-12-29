@@ -17,9 +17,10 @@ Route::get('/', function () {
 	return view('front', compact('links'));
 });
 
-Route::get('/order', function () {
-	$orders = \App\Order::all();
-	return view('order', compact('order'));
+Route::get('/order/{id}', function () {
+	$orders = \App\Order::where('id', 7);
+	//$orders = \App\Order::all();
+	return view('order', compact('orders'));
 });
 
 use Illuminate\Http\Request;
@@ -30,15 +31,13 @@ Route::post('/submit', function (Request $request) {
         'phone' => 'required|max:255',
     ]);
 
-     // $order = tap(new App\Order($data))->save();
-	//echo '<pre>';print_r ($order);echo '</pre>';
+    // $order = tap(new App\Order($data))->save();
 	$order = new App\Order;
 	$order->name = $data['name'];
 	$order->phone = $data['phone'];
 	$order->description = 'test';
 	$order->save();
-	
-   // return redirect('/order');
+    return redirect('/order/'.$order->id);
 });
 
 Auth::routes();
