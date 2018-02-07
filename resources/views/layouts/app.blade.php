@@ -5,12 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
-	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body>
 	<header>
-		<div class="logo"><a href="{{ url('') }}" title="front page"><img src="{{asset('img/pizza-logo.svg')}}" width="133" height="60" alt=""/></a></div>
+		<div class="logo"><a href="{{ url('') }}" title="front page"><img src="{{asset('images/pizza-logo.svg')}}" width="133" height="60" alt=""/></a></div>
 		<div class="login">sign in with google</div>
 	</header>
 	
